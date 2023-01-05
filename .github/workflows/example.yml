@@ -24,6 +24,9 @@ jobs:
           path: ~/.npm
           key: node_cache_${{ hashFiles('**/package-lock.json') }}
           
+      - name: download dependencies
+        run: npm ci
+        
       - name: build app
         run: npm run build
       
