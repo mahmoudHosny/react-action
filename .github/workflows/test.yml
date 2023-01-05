@@ -6,6 +6,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: discover
+        working-directory: C:\
         run: |
           ls
         
