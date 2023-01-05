@@ -35,5 +35,15 @@ jobs:
         with:
           name: app
           path: ./build/
-        
+          
+  publish:
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3.0.1
+        with:
+          name: app
+          path: C:\darsalam_fronend_action
+      
       
